@@ -1,0 +1,115 @@
+:root {
+  /* Dark (default) */
+  --bg: #0b1020;
+  --bgAccent: radial-gradient(circle at top, #1d2b58, #070a14);
+  --card: rgba(255, 255, 255, 0.06);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.65);
+  --border: rgba(255, 255, 255, 0.14);
+
+  --primary: #4f46e5;
+  --primaryHover: #4338ca;
+
+  --inputBg: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="light"] {
+  /* Light */
+  --bg: #f6f7fb;
+  --bgAccent: linear-gradient(120deg, #f4f7ff, #eef2ff);
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: rgba(15, 23, 42, 0.12);
+
+  --primary: #4f46e5;
+  --primaryHover: #4338ca;
+
+  --inputBg: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  min-height: 100vh;
+  background: var(--bgAccent);
+  color: var(--text);
+}
+
+/* -----------------------
+   Auth Pages (Login/Register)
+------------------------ */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.auth-card {
+  background: var(--card);
+  color: var(--text);
+  padding: 30px 35px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid var(--border);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.auth-card h2 {
+  margin: 0 0 18px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--inputBg);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+
+.auth-card input::placeholder {
+  color: var(--muted);
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.auth-card button:hover {
+  background: var(--primaryHover);
+}
+
+.auth-card .link-btn {
+  background: none;
+  color: var(--primary);
+  margin-top: 12px;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.error-text {
+  color: #ff4d4d;
+  margin-bottom: 12px;
+}
+
+/* Optional: improve links */
+a {
+  color: inherit;
+}
